@@ -10,10 +10,10 @@
         public function __construct()
         {
             $this->gatewayDTO = new GatewayDTO();
-            $this->url='https://dbsakila.herokuapp.com/Actores/actor/';
-            $this->link= 'https://my-user-auth.herokuapp.com/usuario/';
-            $this->linkPeli='https://dbsakila.herokuapp.com/Peliculas/Pelicula/';
-            $this->linkCate='https://dbsakila.herokuapp.com/Categorias/Categoria/';
+            $this->url='https://magdalena1.herokuapp.com/Actores/actor/';
+            $this->link= 'https://desempenom.herokuapp.com/usuario/';
+            $this->linkPeli='https://magdalena1.herokuapp.com/Peliculas/Pelicula/';
+            $this->linkCate='https://magdalena1.herokuapp.com/Categorias/Categoria/';
             
         }
         
@@ -30,7 +30,6 @@
 
                     }
                     case 'GET':{
-                        
                         self::http('GET', $this->gatewayDTO, $this->url. $_GET["id"] );
                     break;
                     }
@@ -63,7 +62,6 @@
                 switch ($request){
                     
                     case 'GET':{
-                        
                         self::http('GET', $this->gatewayDTO, $this->linkPeli . $_GET["id"] );
                     break;
                     }
